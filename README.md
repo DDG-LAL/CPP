@@ -1,2 +1,2 @@
-# CPP_code
+# C++_code
 //初学c++
