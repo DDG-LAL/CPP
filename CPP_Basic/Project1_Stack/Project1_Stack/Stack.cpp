@@ -14,7 +14,7 @@ public:
 
 	Stack(size_t size = 4) //构造函数
 	{
-		//cout << "Stack()\n" << endl;
+		//cout << "构造\n" << endl;
 		if (size == 0)
 		{
 			_data = nullptr;
@@ -32,6 +32,20 @@ public:
 			_top = 0;
 			_cap = size;
 		}
+	}
+
+	Stack(const Stack& s) //拷贝构造函数
+	{
+		_top = s._top;
+		_cap = s._cap;
+		STdatatype* tmp = (STdatatype*)malloc(sizeof(STdatatype) * s._cap);
+		if(tmp==nullptr)
+		{
+			perror("malloc\n");
+			exit(-1);
+		}
+		_data = tmp;
+		memcpy(_data, s._data, sizeof(STdatatype) * s._cap);
 	}
 
 	bool Empty()
@@ -76,7 +90,7 @@ public:
 
 	~Stack() //析构函数
 	{
-		//cout << "\n~Stack()" << endl;
+		//cout << "\n析构\n" << endl;
 		free(_data);
 		//_data = nullptr;
 		//_top = _cap = 0; //可以不写
