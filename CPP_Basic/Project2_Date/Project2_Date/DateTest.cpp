@@ -47,5 +47,11 @@ int main()
 	cout << "d5 - d4 = " << (d5 - d4) << endl;
 	cout << "d4 - d5 = " << (d4 - d5) << endl;
 
+	cout << "\nd5:" << d5 << endl;
+
+	cout << "modify d5:";
+	cin >> d5;
+	cout << "\nd5:" << d5 << endl;
+
 	return 0;
 }
