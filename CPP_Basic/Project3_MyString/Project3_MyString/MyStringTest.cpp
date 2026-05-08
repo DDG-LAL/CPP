@@ -11,9 +11,7 @@ int main()
 	cout << s2.c_str() << endl;
 
 	for (size_t i = 0; i < s1.size(); ++i)
-	{
 		cout << s1[i] << " ";
-	}
 	cout << endl << endl;
 
 	string::iterator it = s1.begin();
@@ -69,6 +67,27 @@ int main()
 	cout << "\ns3:";
 	cin >> s3;
 	cout << s3 << endl;
+
+	s3.resize(1);
+	cout << s3 << endl;
+	s3.resize(3, 'x');
+	cout << s3 << endl;
+	s3.resize(10);
+	cout << s3 << endl;
+
+	s3.clear();
+	s3 += "123456789";
+	cout << s3 << endl;
+	cout << s3.find('3') << endl;
+	cout << s3.find("56") << endl;
+
+	string s4 = s3.substr(2);
+	cout << s4 << endl;
+
+	s3 = s2;
+	cout << s3 << endl;
+
+	test_my_string();
 
 	return 0;
 }
