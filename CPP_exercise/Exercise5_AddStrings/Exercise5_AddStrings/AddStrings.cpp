@@ -14,7 +14,7 @@ using std::reverse;
 class Solution
 {
 public:
-	string addStrings(string num1, string num2)
+	string addStrings(string& num1, string& num2)
 	{
 		string str;
 		int i1 = num1.size() - 1;
