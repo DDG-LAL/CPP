@@ -47,6 +47,6 @@ int main()
 	string s1("156756486");
 	string s2("97406384266");
 	cout << s1 << '+' << s2 << '=' << endl << endl;
-	cout << Solution().addStrings(s1, s2) << endl; //Êä³ö97563140752
+	cout << Solution().addStrings(s1, s2) << endl; //97563140752
 	return 0;
 }
