@@ -22,7 +22,7 @@ public:
 	int evalRPN(vector<string>& tokens)
 	{
 		stack<int> st;
-		for (auto e : tokens)
+		for (auto& e : tokens)
 		{
 			if (e == "+" || e == "-" || e == "*" || e == "/") //若当前元素是运算符，则取出栈顶两个元素进行运算，并将运算结果入栈
 			{

@@ -89,7 +89,7 @@ int main()
 {
 	vector<string> test = { "10", "*", "(", "6", "/", "(", "(", "9", "+", "3", ")", "*", "-11", ")", ")", "+", "17" };
 	int i = 0;
-	for (auto e : test)
+	for (auto& e : test)
 		cout << e << " ";
 	cout << endl << endl;
 	cout << (Solution().InfixToPostfix(test)) << endl;
