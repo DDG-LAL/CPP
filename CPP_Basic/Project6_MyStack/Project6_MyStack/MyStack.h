@@ -1,7 +1,13 @@
 #pragma once
 
 #include<iostream>
+#include<vector>
+#include<list>
+#include<string>
 #include<deque>
+using std::vector;
+using std::list;
+using std::string;
 using std::deque;
 using std::endl;
 
@@ -17,17 +23,17 @@ namespace MyStack
 		}
 		void pop()
 		{
-			_con.pop();
+			_con.pop_back();
 		}
-		T top()
+		const T& top()
 		{
 			return _con.back();
 		}
-		void empty()
+		bool empty()
 		{
 			return _con.empty();
 		}
-		int size()
+		size_t size()
 		{
 			return _con.size();
 		}
